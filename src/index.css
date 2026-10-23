@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-slate-50 font-sans text-navy-900 antialiased;
+  }
+
+  ::selection {
+    @apply bg-royal-500/20;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-pad {
+    @apply py-14 sm:py-16 lg:py-20;
+  }
+
+  .input-base {
+    @apply w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm text-navy-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-royal-500 focus:ring-2 focus:ring-royal-500/20 disabled:cursor-not-allowed disabled:bg-slate-100;
+  }
+
+  .input-error {
+    @apply border-red-300 focus:border-red-400 focus:ring-red-400/20;
+  }
+
+  .label-base {
+    @apply mb-1.5 block text-sm font-medium text-navy-800;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-lg bg-slate-200/70;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
